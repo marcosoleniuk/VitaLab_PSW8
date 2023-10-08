@@ -2,23 +2,22 @@
 Aplicação de um laboratório de exames do intessivão em python + django da Pythonando
 
 # Pré-requisitos
-# Antes de começar, você precisa ter as seguintes ferramentas instaladas:
-# Configurações iniciais
 # Primeiro devemos criar o ambiente virtual:
 
-# Linux
+Linux
 python3 -m venv venv
 
-# Windows
+Windows
 python -m venv venv
 
 # Após a criação do venv vamos ativa-lo:
-#Linux
+Linux
 source venv/bin/activate
 
-#Windows
+Windows
 venv\Scripts\Activate
-# Caso algum comando retorne um erro de permissão execute o código e tente novamente:
+
+## Caso algum comando retorne um erro de permissão execute o código e tente novamente:
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 
 # Agora vamos fazer a instalação das dependências das bibliotecas:
