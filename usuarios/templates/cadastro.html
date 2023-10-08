@@ -1,0 +1,114 @@
+{% extends "bases/base.html" %} {% load static %} {% block 'head' %}
+<link href="{% static 'usuarios/css/css.css' %}" rel="stylesheet" />
+{% endblock 'head' %} {% block 'conteudo' %}
+<br />
+<br />
+<div class="container">
+  {% if messages %} {% for message in messages %}
+  <div class="alert {{ message.tags }}">{{ message }}</div>
+  {% endfor %} {% endif %}
+  <h3 class="font-destaque-secundaria">Cadastre-se</h3>
+  <div class="row">
+    <div class="col-md-3" style="text-align: center">
+      <img src="{% static 'geral/img/logo.png' %}" alt="" />
+      <h3>VitaLab MOleniuk Pythonando</h3>
+    </div>
+    <div class="col-md-9">
+      <form action="{% url 'cadastro' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="primeiro_nome">Primeiro nome</label>
+            <input
+              type="text"
+              class="form-control form-control-lg input-default"
+              id="primeiro_nome"
+              name="primeiro_nome"
+            />
+            <br />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="ultimo_nome">Último nome</label>
+            <input
+              type="text"
+              class="form-control form-control-lg input-default"
+              id="ultimo_nome"
+              name="ultimo_nome"
+            />
+            <br />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="cpf">CPF</label>
+            <input
+              type="text"
+              class="form-control form-control-lg input-default"
+              id="cpf"
+              name="cpf"
+            />
+            <br />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              class="form-control form-control-lg input-default"
+              id="username"
+              name="username"
+            />
+            <br />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="email">E-mail</label>
+            <input
+              type="text"
+              class="form-control form-control-lg input-default"
+              id="email"
+              name="email"
+            />
+            <br />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="senha">Senha</label>
+            <input
+              type="password"
+              class="form-control form-control-lg input-default"
+              id="senha"
+              name="senha"
+            />
+            <br />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="confirmar_senha">Confirmar senha</label>
+            <input
+              type="password"
+              class="form-control form-control-lg input-default"
+              id="confirmar_senha"
+              name="confirmar_senha"
+            />
+            <br />
+          </div>
+        </div>
+        <br />
+        <input
+          type="submit"
+          class="btn btn-primary btn-lg btn-default"
+          value="Cadastrar"
+        />
+        <br />
+        <br />
+        <button
+          type="button"
+          class="btn btn-secondary btn-lg btn-voltar"
+          onclick="window.location.href='{% url 'login' %}'"
+        >
+          Voltar ao Login
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
