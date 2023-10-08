@@ -5,7 +5,9 @@ Aplicação de um laboratório de exames do intessivão em python + django da Py
 # Primeiro devemos criar o ambiente virtual:
 
 Linux
+```sh
 python3 -m venv venv
+```
 
 Windows
 python -m venv venv
