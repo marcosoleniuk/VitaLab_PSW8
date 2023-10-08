@@ -1,6 +1,9 @@
 # VitaLab_PSW8
 Aplicação de um laboratório de exames do intessivão em python + django da Pythonando
 
+## 🔗 Link live do projeto:
+https://intensivopythondjango.moleniuk.com/
+
 ## Pré-requisitos
 ## 1. Primeiro devemos criar o ambiente virtual:
 
@@ -41,6 +44,11 @@ Windows
 pip install -r requirements.txt
 ```
 
+Criar usuário Admin 
+```sh
+python manage.py createsuperuser
+```
+
 ## 4. Agora é só iniciar rodando o seguinte comando
 Linux
 ```sh
@@ -51,6 +59,15 @@ Windows
 ```sh
 python manage.py runserver
 ```
+Login e Cadastro de Usuário
+```sh
+http://127.0.0.1:8000
+```
+Área de administração
+```sh
+http://127.0.0.1:8000/admin
+```
+
 
 
 
